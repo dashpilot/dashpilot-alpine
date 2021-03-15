@@ -79,7 +79,7 @@
           show: null,
           get() {
             this.isLoading = true;
-            fetch(`data.json`)
+            fetch(`https://test-repo-xi.vercel.app/data.json`)
               .then(res => res.json())
               .then(data => {
                 console.log(data)
