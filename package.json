@@ -1,4 +1,10 @@
 {
+  "name": "dashpilot-alpinejs",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "standard && node test"
+  },
   "dependencies": {
     "@octokit/rest": "^18.0.12",
     "http-status-codes": "^2.1.4",
