@@ -1,5 +1,5 @@
 import Status from 'http-status-codes';
-import verifyToken from "../auth/firebase.js";
+import verifyToken from "../auth/userbase.js";
 import {
   setData
 } from "./lib/github.js";
