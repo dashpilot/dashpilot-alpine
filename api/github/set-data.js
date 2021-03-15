@@ -22,6 +22,8 @@ export default async (req, res) => {
     }
 
     verifyToken(token).then(function(userid) {
+      console.log(userid);
+      console.log(path);
 
       setData(path, content, type).then(function(result) {
         res.json({
