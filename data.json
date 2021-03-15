@@ -10,7 +10,7 @@
     "body": "<p>Hello folks</p>\n",
     "data": {
       "extra": "Some extra data",
-      "summary": "Hello folks"
+      "summary": "Hello folks",
     }
   }, {
     "id": "210414_my-post.md",
@@ -18,7 +18,7 @@
     "body": "<p>This is some body text</p>\n",
      "data": {
       "extra": "Some extra data",
-      "summary": "Hello folks"
+      "summary": "Hello folks",
     }
   }]
 }
