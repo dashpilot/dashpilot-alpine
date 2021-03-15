@@ -9,8 +9,8 @@ const verifyToken = async function(idToken) {
   });
   const userid = await response.json();
 
-  if (userid) {
-    return userid;
+  if (userid.hasOwnProperty('userId')) {
+    return userid.userId;
   } else {
     throw 'Invalid token';
   }

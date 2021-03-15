@@ -93,13 +93,14 @@
             console.log(document.querySelector('[x-data]').__x.getUnobservedData().data);
             var data = document.querySelector('[x-data]').__x.getUnobservedData().data;
             var opts = {
-              path: "public/data.json",
+              path: "/public/data.json",
               type: "json",
               content: data
             }
             fetch('/api/github/set-data', {
                 headers: {
-                  authorization: window.token,
+                  'Authorization': window.token,
+                  'Content-Type': 'application/json'
                 },
                 body: JSON.stringify(opts),
                 method: 'post',
