@@ -1,24 +1,24 @@
 {
-  "artists": [{
-    "id": "210414_daryll-ann1.md",
-    "title": "Daryll-ann",
-    "body": "<p>Daryll-Ann was a Dutch rock band stemming from Ermelo, Netherlands. Between 1992 and 2004 the band released six studio albums, plus one live album. Daryll-Ann was the first signing of Dutch label Excelsior Recordings.</p>\n"
-  }],
-  "blog": [{
-    "id": "210210_another-post.md",
-    "title": "This is another post",
-    "body": "<p>Hello folks</p>\n",
-    "data": {
-      "extra": "Some extra data",
-      "summary": "Hello folks",
-    },
-  }, {
-    "id": "210414_my-post.md",
-    "title": "This is my second post",
-    "body": "<p>This is some body text</p>\n",
-    "data": {
-      "extra": "Some extra data",
-      "summary": "Hello folks",
-    },
-  }]
+	"artists": [{
+		"id": "210414_daryll-ann1.md",
+		"title": "Daryll-ann",
+		"body": "<p>Daryll-Ann was a Dutch rock band stemming from Ermelo, Netherlands. Between 1992 and 2004 the band released six studio albums, plus one live album. Daryll-Ann was the first signing of Dutch label Excelsior Recordings.</p>\n"
+	}],
+	"blog": [{
+		"id": "210210_another-post.md",
+		"title": "This is another post",
+		"body": "<p>Hello folks</p>\n",
+		"data": {
+			"extra": "Some extra data",
+			"summary": "Hello folks"
+		}
+	}, {
+		"id": "210414_my-post.md",
+		"title": "This is my second post",
+		"body": "<p>This is some body text</p>\n",
+		"data": {
+			"extra": "Some extra data",
+			"summary": "Hello folks"
+		}
+	}]
 }
