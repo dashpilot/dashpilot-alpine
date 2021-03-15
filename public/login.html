@@ -163,11 +163,14 @@
           document.querySelector('#login').style.display = 'none';
           document.querySelector('#logout').style.display = 'block';
           sessionStorage.setItem('username', session.user.username);
+          console.log(session.user.authToken);
         } else {
           document.querySelector('#logout').style.display = 'none';
           document.querySelector('#login').style.display = 'block';
           sessionStorage.removeItem('username');
         }
+      
+     
 
       });
 
