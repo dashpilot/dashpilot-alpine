@@ -102,7 +102,7 @@
                 headers: {
                   authorization: window.token,
                 },
-                body: JSON.stringify(data),
+                body: JSON.stringify(opts),
                 method: 'post',
               })
               .then(response => response.json())
