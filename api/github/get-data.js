@@ -1,5 +1,6 @@
 import Status from 'http-status-codes';
 import verifyToken from "../auth/userbase.js";
+import metadataParser from 'markdown-yaml-metadata-parser';
 import {
   getData
 } from "./lib/github.js";
@@ -18,9 +19,13 @@ export default async (req, res) => {
     verifyToken(token).then(function(userid) {
 
       getData(path).then(function(result) {
+        
+        // parse markdown and YAML
+        var data = metadataParser(result.content);
+        
         res.json({
           ok: true,
-          msg: result.content
+          msg: data
         })
       });
 
