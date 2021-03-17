@@ -10,12 +10,16 @@
 
 <body spellCheck="false">
   <main class="container mt-5">
-    <div x-data="loadData()">
+    <div x-data="loadData()" x-init="loadData().get">
+
+      <template x-if="data">
 
 
-            <h1 x-text="item.metadata.title"></h1>
+            <h1 x-text="data.metadata.title"></h1>
+        
+        <p x-text="data.content"></p>
             
-
+      </template>
       </div>
     <script>
       function loadData() {
