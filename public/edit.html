@@ -10,66 +10,13 @@
 
 <body spellCheck="false">
   <main class="container mt-5">
-    <div x-data="loadData()" x-init="loadData().get">
+    <div x-data="item">
 
-      <template x-if="data">
 
-        <template x-for="key in Object.keys(data)">
-          <div>
-            <h1 x-text="key"></h1>
-            <template x-for="item, mykey in data[key]">
-              <div class="post">
+            <h1 x-text="item.metadata.title"></h1>
+            
 
-                <b x-text="item.title" @click="show = item.id"></b>
-                <template x-if="show == item.id">
-                  <div class="form">
-
-                    <input type="text" x-model="item.title" class="form-control">
-
-                    <alpine-editor x-model="item.body" data-h1-classes="text-xl">
-                      <div data-type="menu" class="rte-toolbar">
-                        <div class="btn-group">
-                          <button type="button" data-command="strong" data-active-class="bg-blue-400" class="btn btn-outline-secondary">
-                            Bold
-                          </button>
-                          <button type="button" data-command="em" data-active-class="bg-blue-400" class="btn btn-outline-secondary">
-                            Italic
-                          </button>
-
-                        </div>
-                      </div>
-
-                      <div class="border mt-2">
-                        <div data-type="editor" class="p-2" x-on:input="item.body = document.querySelectorAll('.ProseMirror')[0].innerHTML">
-                        </div>
-                      </div>
-                    </alpine-editor>
-
-                    <template x-if="item.hasOwnProperty('data')">
-                      <template x-for="mykey in Object.keys(item.data)">
-                        <div>
-                          <template x-if="mykey != 'title'">
-                            <div>
-                              <div class="label" x-text="mykey"></div>
-                              <input type="text" x-model="item.data[mykey]" class="form-control">
-                            </div>
-                          </template>
-                        </div>
-                      </template>
-                    </template>
-
-                    <button class="btn btn-outline-success mt-3" @click="save();">Save</button>
-
-                  </div>
-                </template>
-              </div>
-            </template>
-          </div>
-        </template>
-
-      </template>
-
-    </div>
+      </div>
     <script>
       function loadData() {
         return {
@@ -145,6 +92,7 @@
               .then(response => response.json())
               .then(res => {
                 console.log(res)
+                document.querySelector('[x-data]').__x.$data.item = res.msg;
               })
               .catch(error => {
                 console.error('Error:', error)
